@@ -82,3 +82,14 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+    # Artifact name
+        name: codeql report
+    # A file, directory or wildcard pattern that describes what to upload
+        path: /home/runner/work/_temp/codeql_databases/csharp.zip.
+   
+
+          
